@@ -21,8 +21,9 @@ namespace UnitTest
             var datastring = await response.Content.ReadAsStringAsync();
             var data = JsonConvert.DeserializeObject<List<string>>(datastring);
 
-            Assert.Equal(data.Count, 3);
+            Assert.Equal(data.Count, 4);
             Assert.Contains(data, x => x == "@wevertongomes");
+            Assert.Contains(data, x => x == "@randercastro");
         }
     }
 }
