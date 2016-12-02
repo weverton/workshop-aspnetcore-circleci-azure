@@ -31,5 +31,5 @@ deployment:
     commands:
       - docker build -t workshop-aspnetcore-weverton .
       - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASSWORD
-      - docker tag workshop-aspnetcore-weverton -$DOCKER_USER/workshop-aspnetcore-weverton:latest
+      - docker tag workshop-aspnetcore-weverton $DOCKER_USER/workshop-aspnetcore-weverton:latest
       - docker push $DOCKER_USER/workshop-aspnetcore-weverton
